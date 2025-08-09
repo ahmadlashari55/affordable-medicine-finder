@@ -1,0 +1,77 @@
+{
+  "medicines": [
+    {
+      "id": "m1",
+      "name": "Panadol",
+      "generic": "Paracetamol",
+      "price": 25,
+      "priceText": "Rs.25 (10)",
+      "brands": ["Panadol"],
+      "alternatives": ["Paracet", "Napa"],
+      "desc": "Analgesic & antipyretic",
+      "expiry": "2026-12",
+      "prescription": false,
+      "category": "Analgesic"
+    },
+    {
+      "id": "m2",
+      "name": "Augmentin",
+      "generic": "Amoxicillin + Clavulanic Acid",
+      "price": 350,
+      "priceText": "Rs.350 (10)",
+      "brands": ["Augmentin"],
+      "alternatives": ["Amoclav"],
+      "desc": "Antibiotic - prescription required",
+      "expiry": "2025-06",
+      "prescription": true,
+      "category": "Antibiotic"
+    },
+    {
+      "id": "m3",
+      "name": "Disprin",
+      "generic": "Aspirin",
+      "price": 15,
+      "priceText": "Rs.15 (10)",
+      "brands": ["Disprin"],
+      "alternatives": ["Ecosprin"],
+      "desc": "Pain relief / blood thinner",
+      "expiry": "2027-01",
+      "prescription": false,
+      "category": "Analgesic"
+    }
+  ],
+  "pharmacies": [
+    {
+      "id": "p1",
+      "name": "Sehat Pharmacy",
+      "city": "Lahore",
+      "address": "Model Town",
+      "verified": true,
+      "stock": { "m1": 20, "m2": 5 },
+      "contact": "+92300111222",
+      "opening": "09:00-21:00",
+      "rating": 4.6
+    },
+    {
+      "id": "p2",
+      "name": "Clinix Pharmacy",
+      "city": "Karachi",
+      "address": "Gulshan",
+      "verified": true,
+      "stock": { "m1": 50, "m3": 10 },
+      "contact": "+92215554444",
+      "opening": "08:00-22:00",
+      "rating": 4.4
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Test User",
+      "email": "test@local",
+      "passwordHash": "",
+      "favorites": ["m1"]
+    }
+  ],
+  "orders": []
+}
