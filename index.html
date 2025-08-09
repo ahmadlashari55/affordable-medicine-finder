@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Affordable Medicine Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">AM</div>
+      <div>
+        <div class="title">Affordable Medicine Finder</div>
+        <div class="subtitle">Compare prices • Find alternatives • Quick order</div>
+      </div>
+    </div>
+
+    <div class="top-controls">
+      <button id="voiceBtn" class="icon" title="Voice search">🎤</button>
+      <button id="themeBtn" class="icon" title="Toggle theme">🌙</button>
+      <button id="langBtn" class="icon" title="Toggle Urdu/English">اردو</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-card card">
+      <div class="search-row">
+        <div class="search-wrap">
+          <input id="q" placeholder="Search medicine or generic (press / to focus)" autocomplete="off" />
+          <div id="suggestions" class="suggestions" hidden></div>
+        </div>
+
+        <div class="controls-right">
+          <button id="searchBtn" class="btn primary">Search</button>
+          <button id="exportBtn" class="btn">Export CSV</button>
+        </div>
+      </div>
+
+      <div class="filters-row">
+        <select id="city">
+          <option value="all">All cities</option>
+          <option>Karachi</option>
+          <option>Lahore</option>
+          <option>Islamabad</option>
+          <option>Multan</option>
+        </select>
+
+        <select id="sortBy">
+          <option value="relevance">Sort: Relevance</option>
+          <option value="priceLow">Price: Low → High</option>
+          <option value="priceHigh">Price: High → Low</option>
+        </select>
+
+        <select id="showType">
+          <option value="all">Show: All</option>
+          <option value="verified">Verified Pharmacies</option>
+        </select>
+
+        <button id="favViewBtn" class="btn">★ Favourites</button>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="left-col">
+        <div id="resultsCard" class="card">
+          <h2>Results</h2>
+          <div id="results" class="result-list"></div>
+          <div id="noResults" class="muted" hidden>No results — try another query.</div>
+        </div>
+
+        <div id="detailCard" class="card" hidden></div>
+      </section>
+
+      <aside class="right-col">
+        <div id="pharmCard" class="card">
+          <h3>Nearby Pharmacies</h3>
+          <div id="pharmList"></div>
+        </div>
+
+        <div id="favCard" class="card">
+          <h4>Saved Favourites</h4>
+          <div id="favList" class="muted">No favourites yet</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Prototype — static demo. To connect real data you will add a backend (Node.js / API).
+  </footer>
+
+  <!-- data.js defines MEDS and PHARMS arrays -->
+  <script src="data.js"></script>
+  <!-- main behaviour -->
+  <script src="script.js"></script>
+</body>
+</html>
